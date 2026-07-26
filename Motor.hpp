@@ -34,6 +34,8 @@ class Motor {
   struct Feedback {
     uint8_t error_id;                   /*电机错误码*/
     uint8_t state = 0;                  /*电机错误状态*/
+    uint64_t received_time_us = 0;      /*最近有效反馈的原始接收时间*/
+    uint16_t sequence = 0;              /*每次有效反馈解码后递增*/
     float position;                     /*电机原始角度*/
     LibXR::CycleValue<float> abs_angle; /*CycleValue的角度*/
     float velocity;                     /*转速*/
