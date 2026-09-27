@@ -71,8 +71,16 @@ class Motor {
   virtual LibXR::ErrorCode Update() = 0;
 
   /**
+   * @brief 查询电机反馈链路是否在线
+   * @return true
+   * 反馈未超过实现定义的超时时间
+   */
+  virtual bool IsOnline() const = 0;
+
+  /**
    * @brief 获取当前反馈
-   * @return const Feedback& 反馈数据引用
+   * @return const Feedback&
+   * 反馈数据引用
    */
   virtual const Feedback& GetFeedback() = 0;
 
