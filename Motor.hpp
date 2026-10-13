@@ -1,10 +1,18 @@
 #pragma once
+
+// clang-format off
+/* === MODULE MANIFEST V2 ===
+module_description: Motor abstraction
+standalone: false
+depends: []
+=== END MANIFEST === */
+// clang-format on
 // clang-format on
 
 #include <cstdint>
 
-#include "app_framework.hpp"
 #include "cycle_value.hpp"
+#include "libxr.hpp"
 #include "libxr_def.hpp"
 
 /**
